@@ -2,7 +2,6 @@
   "name": "yandex-interview",
   "type": "module",
   "description": "test tasks for interview",
-  "main": "get-function.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
