@@ -15,13 +15,18 @@ const get = async (url, limit = 5) => {
     const json = await response.json();
     return json;
   } catch (error) {
-    if (limit === 1) throw 'Заданный URL недоступен';
+    if (limit === 1) throw `URL ${url} недоступен`;
     return await get(url, limit - 1);
   }
 };
 
-const url = 'https://rickandmortyai.com/api/character/483';
+const url = 'https://rickandmortyapi.com/api/character/483';
+const brokenUrl = 'https://rickandmortpi.com/api/character/483';
 
 get(url)
+  .then((res) => console.log('res: ', res))
+  .catch((err) => console.error('err: ', err));
+
+get(brokenUrl)
   .then((res) => console.log('res: ', res))
   .catch((err) => console.error('err: ', err));
