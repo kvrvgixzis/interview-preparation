@@ -1,0 +1,22 @@
+{
+  "name": "yandex-interview",
+  "type": "module",
+  "description": "test tasks for interview",
+  "main": "get-function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvrvgixzis/yandex-interview.git"
+  },
+  "author": "Nikita Parfenov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvrvgixzis/yandex-interview/issues"
+  },
+  "homepage": "https://github.com/kvrvgixzis/yandex-interview#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
