@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class MinStack {
+export class MinStack {
   constructor() {
     this.head = null;
     this.length = 0;
@@ -43,17 +43,3 @@ class MinStack {
     return this.head.min;
   };
 }
-
-let temp;
-const minStack = new MinStack();
-
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-temp = minStack.getMin(); // return -3
-console.log(temp);
-minStack.pop();
-temp = minStack.top(); // return 0
-console.log(temp);
-temp = minStack.getMin(); // return -2
-console.log(temp);
