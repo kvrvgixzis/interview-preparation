@@ -2,7 +2,7 @@
  * Reverse linked list
  */
 
-import { LinkedList, printLinkedList } from '../linked-list.js';
+import { LinkedList } from '../linked-list.js';
 
 export const reverseList = (head) => {
   let current = head;

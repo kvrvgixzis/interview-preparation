@@ -13,10 +13,7 @@ export const reducer = (action) => {
       ];
       break;
     case 'FIND':
-      const target = store.persons.find(
-        (p) => p.id === action.payload
-      );
-      console.log(target?.name);
+      return store.persons.find((p) => p.id === action.payload)?.name;
     default:
       break;
   }

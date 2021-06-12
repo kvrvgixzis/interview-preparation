@@ -31,7 +31,7 @@ export class LinkedList {
   };
 }
 
-export const printLinkedList = (head) => {
+export const listToString = (head) => {
   let current = head;
   const array = [current.value];
 
@@ -40,5 +40,5 @@ export const printLinkedList = (head) => {
     array.push(current.value);
   }
 
-  console.log(array);
+  return array.join(', ');
 };
