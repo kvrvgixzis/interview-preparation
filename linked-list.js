@@ -6,9 +6,13 @@ class Node {
 }
 
 export class LinkedList {
-  constructor() {
+  constructor(initialArray) {
     this.head = null;
     this.length = 0;
+
+    if (initialArray) {
+      initialArray.map(this.add);
+    }
   }
 
   add = (value) => {
@@ -36,5 +40,5 @@ export const printLinkedList = (head) => {
     array.push(current.value);
   }
 
-  console.log('List:', array);
+  console.log(array);
 };
