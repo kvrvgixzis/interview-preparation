@@ -7,7 +7,7 @@
  * вернуть “1-4,6-7,9,11"
  */
 
-const collapseNumbers = (numbers) => {
+export const collapseNumbers = (numbers) => {
   numbers = numbers.sort((a, b) => a - b);
   const chunks = [];
 
@@ -30,6 +30,3 @@ const collapseNumbers = (numbers) => {
     )
     .join(', ');
 };
-
-const answer = collapseNumbers([6, 1, 3, 9, 2, 4, 11, 7]);
-console.log('answer: ', answer);
