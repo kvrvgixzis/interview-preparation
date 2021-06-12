@@ -17,55 +17,43 @@ class MinStack {
 
     if (this.length === 0) {
       node.min = value;
-      this.head = node;
     } else {
       node.min = value < this.head.min ? value : this.head.min;
       node.prev = this.head;
-      this.head = node;
     }
 
+    this.head = node;
     this.length++;
     return this;
   };
 
   pop = () => {
-    if (this.length === 0) {
-      console.log('Stack is empty');
-      return;
-    }
-
+    if (this.length === 0) throw 'Stack is empty';
     this.head = this.head?.prev ?? null;
     this.length--;
   };
 
   top = () => {
-    if (this.length === 0) {
-      console.log('Stack is empty');
-      return;
-    }
-
-    const top = this.head.value;
-    console.log('top: ', top);
-    return top;
+    if (this.length === 0) throw 'Stack is empty';
+    return this.head.value;
   };
 
   getMin = () => {
-    if (this.length === 0) {
-      console.log('Stack is empty');
-      return;
-    }
-
-    const min = this.head.min;
-    console.log('min: ', min);
-    return min;
+    if (this.length === 0) throw 'Stack is empty';
+    return this.head.min;
   };
 }
 
+let temp;
 const minStack = new MinStack();
+
 minStack.push(-2);
 minStack.push(0);
 minStack.push(-3);
-minStack.getMin(); // return -3
+temp = minStack.getMin(); // return -3
+console.log(temp);
 minStack.pop();
-minStack.top(); // return 0
-minStack.getMin(); // return -2
+temp = minStack.top(); // return 0
+console.log(temp);
+temp = minStack.getMin(); // return -2
+console.log(temp);
