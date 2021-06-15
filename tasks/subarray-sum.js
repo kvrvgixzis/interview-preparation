@@ -5,7 +5,7 @@
 
 export const subarraySum = (nums, k) => {
   let count = 0;
-  let prefixSum = new prefixSum();
+  let prefixSum = new Map();
   prefixSum.set(0, 1);
 
   let sum = 0;
