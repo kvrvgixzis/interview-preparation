@@ -1,6 +1,6 @@
 class Node {
-  constructor(value) {
-    this.value = value;
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 }
@@ -15,15 +15,15 @@ export class LinkedList {
     }
   }
 
-  add = (value) => {
-    const node = new Node(value);
+  add = (val) => {
+    const node = new Node(val);
 
     if (this.length === 0) {
       this.head = node;
     } else {
       let current = this.head;
       while (current.next) current = current.next;
-      current.next = new Node(value);
+      current.next = new Node(val);
     }
 
     this.length++;
@@ -33,11 +33,11 @@ export class LinkedList {
 
 export const listToString = (head) => {
   let current = head;
-  const array = [current.value];
+  const array = [current.val];
 
   while (current.next) {
     current = current.next;
-    array.push(current.value);
+    array.push(current.val);
   }
 
   return array.join(', ');
